@@ -1,0 +1,6 @@
+.venv
+data
+wandb
+weight
+__pycache__
+experiment/log

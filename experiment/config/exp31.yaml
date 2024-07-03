@@ -1,0 +1,60 @@
+project: Cassava
+exp_name: exp31
+
+common:
+  seed: 719
+  fold_num: 5
+  train_bs: 32
+  valid_bs: 64
+  num_workers: 4
+  accum_iter: 1
+  verbose_step: 1
+  device: cuda:0
+
+vit:
+  img_size: 384
+  epochs: 10
+  warmup_epoch: 0
+  lr: 0.00001
+  start_lr: 0.00001
+  warm_lr: 0.00001
+  end_lr: 0.000005
+  weight_decay: 0.00001
+  smooth_factor: 0.06
+  dropout_rate: 0.1
+  # Bi-Tempered Logistic Loss parameter
+  # (t1, t2) = (1, 1) equals to Cross Entropy Loss
+  t1: 1
+  t2: 1
+
+deit:
+  img_size: 384
+  epochs: 10
+  warmup_epoch: 0
+  lr: 0.00001
+  start_lr: 0.00001
+  warm_lr: 0.00001
+  end_lr: 0.000001
+  weight_decay: 0.00001
+  smooth_factor: 0.06
+  dropout_rate: 0.1
+  # Bi-Tempered Logistic Loss parameter
+  # (t1, t2) = (1, 1) equals to Cross Entropy Loss
+  t1: 1
+  t2: 1
+
+efficientnet:
+  img_size: 512
+  epochs: 10
+  warmup_epoch: 2
+  lr: 0.00001
+  start_lr: 0.00001
+  warm_lr: 0.000012
+  end_lr: 0.000001
+  weight_decay: 0.00001
+  smooth_factor: 0.06
+  dropout_rate: 0.0
+  # Bi-Tempered Logistic Loss parameter
+  # (t1, t2) = (1, 1) equals to Cross Entropy Loss
+  t1: 0.8
+  t2: 1.4

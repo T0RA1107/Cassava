@@ -1,0 +1,24 @@
+common:
+  seed: 719
+  fold_num: 5
+  valid_bs: 64
+  num_workers: 4
+  accum_iter: 1
+  verbose_step: 1
+  device: cuda:0
+  tta: 5
+  dst_file: ./data/plabel.npy
+
+vit:
+  exp: exp23
+  img_size: 384
+  dropout_rate: 0.1
+  used_epochs: 6 5 4 9 3
+  model_weight_dir: ./weight/vit/exp23
+
+deit:
+  exp: exp31
+  img_size: 384
+  dropout_rate: 0.1
+  used_epochs: 9 6 8 6 9
+  model_weight_dir: ./weight/deit/exp31

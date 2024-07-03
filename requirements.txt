@@ -1,0 +1,13 @@
+albumentations
+matplotlib
+numpy
+opencv-python
+pandas
+Pillow
+pyparsing
+timm
+torch
+torchvision
+tqdm
+hydra-core
+wandb
